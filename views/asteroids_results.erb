@@ -1,0 +1,18 @@
+<div style="font-size: 18px;">
+<h1>Asteroids from <%= @start %> to <%= @end %></h1>
+
+  <% @list_of_objects.each do |date, asteroids| %>
+    <h2>Asteroids on <%= date %>:</h2>
+    <ol>
+      <% asteroids.each do |asteroid| %>
+        <li>
+          <strong>Name:</strong> <%= asteroid["name"] %><br>
+          <strong>Potentially Hazardous:</strong> <%= asteroid["is_potentially_hazardous_asteroid"]%>
+          <br><br>
+          
+        </li>
+      <% end %>
+    </ol>
+  <% end %>
+<p>Go <a href= https://effective-space-doodle-wr7j5q7gwr6jh9xpw-3000.app.github.dev/enter-dates?>back<a>.</p>
+</div>
